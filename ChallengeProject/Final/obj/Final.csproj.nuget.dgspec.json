@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj": {}
+    "C:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj": {}
   },
   "projects": {
-    "c:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj": {
+    "C:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj",
+        "projectUniqueName": "C:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj",
         "projectName": "Final",
-        "projectPath": "c:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj",
+        "projectPath": "C:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\Final.csproj",
         "packagesPath": "C:\\Users\\shawn\\.nuget\\packages\\",
-        "outputPath": "c:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\obj\\",
+        "outputPath": "C:\\Mon_Code\\Challenge-project-foreach-if-array-CSharp-main\\ChallengeProject\\Final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

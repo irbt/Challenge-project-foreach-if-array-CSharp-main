@@ -33,7 +33,7 @@ string currentStudentLetterGrade = "";
 
 // display the header row for scores/grades
 Console.Clear();
-Console.WriteLine("Student\t\tGrade\tLetter Grade\n");
+Console.WriteLine("Student\t\tExam Score\tOverall\tGrade\tExtra Credit\n");
 
 /*
 The outer foreach loop is used to:
@@ -60,8 +60,14 @@ foreach (string name in studentNames)
         studentScores = loganScores;
 
     int sumAssignmentScores = 0;
+    int sumAssignmentRegularScores = 0;
+    int sumExtraScores = 0;
+    int countExtraScores = 0;
 
     decimal currentStudentGrade = 0;
+    decimal currentStudentRegularGrade = 0;
+    decimal currentAverageExtraScores = 0;
+    decimal extraCredit = 0;
 
     int gradedAssignments = 0;
 
@@ -74,13 +80,21 @@ foreach (string name in studentNames)
         gradedAssignments += 1;
 
         if (gradedAssignments <= examAssignments)
-            sumAssignmentScores += score;
+           { sumAssignmentScores        += score;
+             sumAssignmentRegularScores = sumAssignmentScores;}
 
         else
-            sumAssignmentScores += score / 10;
+            {sumAssignmentScores    += score / 10;
+             sumExtraScores         += score;
+             countExtraScores += 1;
+    }
     }
 
-    currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
+    currentStudentGrade         = (decimal)(sumAssignmentScores) / examAssignments;
+    currentStudentRegularGrade  = (decimal)(sumAssignmentRegularScores) / examAssignments;
+    currentAverageExtraScores   = (decimal)(sumExtraScores) / countExtraScores;
+    extraCredit                 = currentStudentGrade - currentStudentRegularGrade;
+
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
@@ -121,10 +135,11 @@ foreach (string name in studentNames)
     else
         currentStudentLetterGrade = "F";
 
+
     // Student         Grade
     // Sophia:         92.2    A-
-    
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+
+    Console.WriteLine($"{currentStudent}\t\t{currentStudentRegularGrade}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{currentAverageExtraScores} ({extraCredit} pts)");
 }
 
 // required for running in VS Code (keeps the Output windows open to view results)
